@@ -321,187 +321,202 @@ public class iAuctionListener extends PluginListener{
 	}
 	
 	public static String getname(Item item){
-		if (item.getItemId() == 5){
-			if (item.getDamage() == 0){ return "Oak wood plank";}
-			if (item.getDamage() == 1){ return "Spruce Wood Plank";}
-			if (item.getDamage() == 2){ return "Birch wood plank";}
-			if (item.getDamage() == 3){ return "Jungle wood plank";}
+		switch(item.getItemId()){
+			case 5:
+				switch(item.getDamage()){
+					case 0: return "Oak Planks";
+					case 1: return "Spruce Planks";
+					case 2: return "Birch Planks";
+					case 3: return "Jungle Planks";
+				}
+			case 6:
+				switch(item.getDamage()){
+					case 0: return "Oak Sapling";
+					case 1: return "Spruce Sapling";
+					case 2: return "Birch Sapling";
+					case 3: return "Jungle Tree Sapling";
+				}
+			case 17:
+				switch(item.getDamage()){
+					case 0: return "Oak Log";
+					case 1: return "Spruce Log";
+					case 2: return "Birch Log";
+					case 3: return "Jungle Log";
+				}
+			case 18:
+				switch(item.getDamage()){
+					case 0: return "OakLeaves";
+					case 1: return "Spruce Leaves";
+					case 2: return "Birch Leaves";
+					case 3: return "Jungle Leaves";
+				}
+			case 24:
+				switch(item.getDamage()){
+					case 0: return "Normal Sandstone";
+					case 1: return "Chiseled Sandstone";
+					case 2: return "Smooth Sandstone";
+				}
+			case 31:
+				switch(item.getDamage()){
+					case 0: return "Dead Shrub";
+					case 1: return "Tall Grass";
+					case 2: return "Fern";
+				}
+			case 35:
+				return item.getColor().getName()+" Wool";
+			case 43:
+				switch(item.getDamage()){
+					case 0: return "DoubleStone Slab";
+					case 1: return "DoubleSandstone Slab";
+					case 2: return "DoubleWooden Stone Slab";
+					case 3: return "DoubleCobblestone Slab";
+					case 4: return "DoubleBrick Slab";
+					case 5: return "DoubleStone Brick Slab";
+					case 5: return "DoubleStone Slab";
+				}		
+			case 44:
+				switch(item.getDamage()){
+					case 0: return "Stone Slab";
+					case 1: return "Sandstone Slab";
+					case 2: return "Wooden Stone Slab";
+					case 3: return "Cobblestone Slab";
+					case 4: return "Brick Slab";
+					case 5: return "Stone Brick Slab";
+				}
+			case 97:
+				switch(item.getDamage()){
+					case 0: return "SilverFish Stone";
+					case 1: return "SilverFish CobbleStone";
+					case 2: return "SilverFish Stonebrick";
+				}
+			case 98:
+				switch(item.getDamage()){
+					case 0: return "Normal Stonebrick";
+					case 1: return "Mossy Stonebrick";
+					case 2: return "Cracked Stonebrick";
+					case 3: return "Chiseled Stonebrick";
+				}
+			case 263:
+				switch(item.getDamage()){
+					case 0: return "Coal";
+					case 1: return "Charcoal";			
+				}
+			case 322:
+				switch(item.getDamage()){
+					case 0: return "Normal Golden Apple";
+					case 1: return "Enchanted Golden Apple";
+				}
+			case 351:
+				switch(item.getDamage()){
+					case 0:return "Ink Sac";
+            		case 1:return "Rose Red";
+            		case 2:return "Cactus Green";
+            		case 3:return "Cocoa Beans";
+					case 4:return "Lapis Lazuli";
+            		case 5:return "Purple Dye";
+            		case 6:return "Cyan Dye";
+					case 7:return "Light Gray Dye";
+					case 8:return "Gray Dye";
+            		case 9:return "Pink Dye";
+            		case 10:return "Lime Dye";
+            		case 11:return "Dandelion Yellow";
+					case 12:return "Light Blue Dye";
+            		case 13:return "Magenta Dye";
+            		case 14:return "Orange Dye";
+					case 15:return "Bone Meal";
+				}
+			case 373:
+				switch(item.getDamage()){ //Just want to point out that these values aren't exactly right, Brewed potions have values in the ranges of 8100 and 16300
+					case 0:return "Water Bottle";
+					case 1:return "Potion of Regeneration";
+        			case 2:return "Potion of Swiftness";
+					case 3:return "Potion of Fire Resistance";
+					case 4:return "Potion of Poison";
+					case 5:return "Potion of Healing";
+					case 6:return "Clear Potion";
+					case 7:return "Clear Potion";
+					case 8:return "Potion of Weakness";
+					case 9:return "Potion of Strength";
+					case 10:return "Potion of Slowness";
+					case 11:return "Diffuse Potion";
+					case 12:return "Potion of Harming";
+					case 13:return "Artless Potion";
+        			case 14:return "Thin Potion";
+        			case 15:return "Thin Potion";
+					case 16:return "Awkward Potion";
+        			case 17:return "Potion of Regeneration";
+        			case 18:return "Potion of Swiftness";
+        			case 19:return "Potion of Fire Resistance";
+        			case 20:return "Potion of Poison";
+        			case 21:return "Potion of Healing";
+        			case 22:return "Bungling Potion";
+        			case 23:return "Bungling Potion";
+        			case 24:return "Potion of Weakness";
+        			case 25:return "Potion of Strength";
+        			case 26:return "Potion of Slowness";
+        			case 27:return "Smooth Potion";
+        			case 28:return "Potion of Harming";
+        			case 29:return "Suave Potion";
+        			case 30:return "Debonair Potion";
+        			case 31:return "Debonair Potion";
+        			case 32:return "Thick Potion";
+        			case 33:return "Potion of Regeneration II";
+        			case 34:return "Potion of Swiftness II";
+        			case 35:return "Potion of Fire Resistance";
+        			case 36:return "Potion of Poison II";
+        			case 37:return "Potion of Healing II";
+        			case 38:return "Charming Potion";
+        			case 39:return "Charming Potion";
+        			case 40:return "Potion of Weakness";
+        			case 41:return "Potion of Strength II";
+        			case 42:return "Potion of Slowness";
+        			case 43:return "Refined Potion";
+        			case 44:return "Potion of Harming II";
+        			case 45:return "Cordial Potion";
+        			case 46:return "Sparkling Potion";
+        			case 47:return "Sparkling Potion";
+        			case 48:return "Potent Potion";
+        			case 49:return "Potion of Regeneration II";
+        			case 50:return "Potion of Swiftness II";
+        			case 51:return "Potion of Fire Resistance";
+        			case 52:return "Potion of Poison II";
+        			case 53:return "Potion of Healing II";
+        			case 54:return "Rank Potion";
+        			case 55:return "Rank Potion";
+        			case 56:return "Potion of Weakness";
+        			case 57:return "Potion of Strength II";
+        			case 58:return "Potion of Slowness";
+        			case 59:return "Acrid Potion";
+        			case 60:return "Potion of Harming II";
+        			case 61:return "Gross Potion";
+        			case 62:return "Stinky Potion";
+        			case 63:return "Stinky Potion";
+        		}
+			case 383:
+				switch(item.getDamage()){
+					case 50:return "Creeper Egg";
+					case 51:return "Skeleton Egg";
+					case 52:return "Spider Egg";
+					case 54:return "Zombie Egg";
+					case 55:return "Slime Egg";
+					case 56:return "Ghast Egg";
+					case 57:return "Zombie Pigman Egg";
+					case 58:return "Enderman Egg";
+					case 59:return "Cave Spider Egg";
+					case 60:return "Silverfish Egg";
+					case 61:return "Blaze Egg";
+					case 62:return "Magma Cube Egg";
+					case 90:return "Pig Egg";
+					case 91:return "Sheep Egg";
+					case 92:return "Cow Egg";
+					case 93:return "Chicken Egg";
+					case 94:return "Squid Egg";
+					case 95:return "Wolf Egg";
+					case 96:return "Mooshroom Egg";
+					case 98:return "Ocelot Egg";
+					case 120:return "Villager Egg";
+				}
+			default: return item.getType().toString();
 		}
-		if (item.getItemId() == 6){
-			if (item.getDamage() == 0){ return "Oak Sapling";}
-			if (item.getDamage() == 1){ return "Spruce Sapling";}
-			if (item.getDamage() == 2){ return "Birch Sapling";}
-			if (item.getDamage() == 3){ return "Jungle Tree Sapling";}
-		}
-		if (item.getItemId() == 17){
-		    if (item.getDamage() == 0){ return "Oak Tree";}
-		    if (item.getDamage() == 1){ return "Spruce Tree";}
-		    if (item.getDamage() == 2){ return "Birch Trees";}
-		    if (item.getDamage() == 3){ return "Jungle Tree";}
-		}
-		if (item.getItemId() == 18){
-			if (item.getDamage() == 0){ return "Oak leaves";}
-			if (item.getDamage() == 1){ return "Spruce leaves";}
-			if (item.getDamage() == 2){ return "Birch leaves";}
-			if (item.getDamage() == 3){ return "Jungle leaves";}
-		}
-		if (item.getItemId() == 24){
-			if (item.getDamage() == 0){ return "Normal Sandstone";}
-			if (item.getDamage() == 1){ return "Chiseled Sandstone";}
-			if (item.getDamage() == 2){ return "Smooth Sandstone";}
-		}
-		if (item.getItemId() == 31){
-			if (item.getDamage() == 0){ return "Dead shrub";}
-			if (item.getDamage() == 1){ return "Tall grass";}
-			if (item.getDamage() == 2){ return "Fern";}
-		}
-		if (item.getItemId() == 35){
-			String toret = item.getColor().toString().toLowerCase()+" Wool";
-			return toret;
-		}
-		if (item.getItemId() == 43){
-			if (item.getDamage() == 0){ return "DoubleStone Slab";}
-			if (item.getDamage() == 1){ return "DoubleSandstone Slab";}
-			if (item.getDamage() == 2){ return "DoubleWooden Stone Slab";}
-			if (item.getDamage() == 3){ return "DoubleCobblestone Slab";}
-			if (item.getDamage() == 4){ return "DoubleBrick Slab";}
-			if (item.getDamage() == 5){ return "DoubleStone Brick Slab";}
-			if (item.getDamage() == 5){ return "DoubleStone Slab";}
-		}
-		if (item.getItemId() == 44){
-			if (item.getDamage() == 0){ return "Stone Slab";}
-			if (item.getDamage() == 1){ return "Sandstone Slab";}
-			if (item.getDamage() == 2){ return "Wooden Stone Slab";}
-			if (item.getDamage() == 3){ return "Cobblestone Slab";}
-			if (item.getDamage() == 4){ return "Brick Slab";}
-			if (item.getDamage() == 5){ return "Stone Brick Slab";}
-		}
-		if (item.getItemId() == 97){
-			if (item.getDamage() == 0){ return "SilverFish Stone";}
-			if (item.getDamage() == 1){ return "SilverFish CobbleStone";}
-			if (item.getDamage() == 2){ return "SilverFish Stonebrick";}
-	    }
-		if (item.getItemId() == 98){
-			if (item.getDamage() == 0){ return "Normal Stonebrick";}
-			if (item.getDamage() == 1){ return "Mossy Stonebrick";}
-			if (item.getDamage() == 2){ return "Cracked Stonebrick";}
-			if (item.getDamage() == 3){ return "Chiseled Stonebrick";}
-	    }
-		if (item.getItemId() == 263){
-			if (item.getDamage() == 0){ return "Coal";}
-			if (item.getDamage() == 1){ return "Charcoal";}
-		}
-		if (item.getItemId() == 322){
-			if (item.getDamage() == 0){ return "Normal Golden Apple";}
-			if (item.getDamage() == 1){ return "Enchanted Golden Apple";}
-		}
-		if (item.getItemId() == 351){
-            if (item.getDamage() == 0){return "Ink Sac";}
-            if (item.getDamage() == 1){return "Rose Red";}
-            if (item.getDamage() == 2){return "Cactus Green";}
-            if (item.getDamage() == 3){return "Cocoa Beans";}
-            if (item.getDamage() == 4){return "Lapis Lazuli";}
-            if (item.getDamage() == 5){return "Purple Dye";}
-            if (item.getDamage() == 6){return "Cyan Dye";}
-            if (item.getDamage() == 7){return "Light Gray Dye";}
-            if (item.getDamage() == 8){return "Gray Dye";}
-            if (item.getDamage() == 9){return "Pink Dye";}
-            if (item.getDamage() == 10){return "Lime Dye";}
-            if (item.getDamage() == 11){return "Dandelion Yellow";}
-            if (item.getDamage() == 12){return "Light Blue Dye";}
-            if (item.getDamage() == 13){return "Magenta Dye";}
-            if (item.getDamage() == 14){return "Orange Dye";}
-            if (item.getDamage() == 15){return "Bone Meal";}
-		}
-		if (item.getItemId() == 373){
-	    if (item.getDamage() == 0){return "Water Bottle";}
-        if (item.getDamage() == 1){return "Potion of Regeneration";}
-        if (item.getDamage() == 2){return "Potion of Swiftness";}
-        if (item.getDamage() == 3){return "Potion of Fire Resistance";}
-        if (item.getDamage() == 4){return "Potion of Poison";}
-        if (item.getDamage() == 5){return "Potion of Healing";}
-        if (item.getDamage() == 6){return "Clear Potion";}
-        if (item.getDamage() == 7){return "Clear Potion";}
-        if (item.getDamage() == 8){return "Potion of Weakness";}
-        if (item.getDamage() == 9){return "Potion of Strength";}
-        if (item.getDamage() == 10){return "Potion of Slowness";}
-        if (item.getDamage() == 11){return "Diffuse Potion";}
-        if (item.getDamage() == 12){return "Potion of Harming";}
-        if (item.getDamage() == 13){return "Artless Potion";}
-        if (item.getDamage() == 14){return "Thin Potion";}
-        if (item.getDamage() == 15){return "Thin Potion";}
-        if (item.getDamage() == 16){return "Awkward Potion";}
-        if (item.getDamage() == 17){return "Potion of Regeneration";}
-        if (item.getDamage() == 18){return "Potion of Swiftness";}
-        if (item.getDamage() == 19){return "Potion of Fire Resistance";}
-        if (item.getDamage() == 20){return "Potion of Poison";}
-        if (item.getDamage() == 21){return "Potion of Healing";}
-        if (item.getDamage() == 22){return "Bungling Potion";}
-        if (item.getDamage() == 23){return "Bungling Potion";}
-        if (item.getDamage() == 24){return "Potion of Weakness";}
-        if (item.getDamage() == 25){return "Potion of Strength";}
-        if (item.getDamage() == 26){return "Potion of Slowness";}
-        if (item.getDamage() == 27){return "Smooth Potion";}
-        if (item.getDamage() == 28){return "Potion of Harming";}
-        if (item.getDamage() == 29){return "Suave Potion";}
-        if (item.getDamage() == 30){return "Debonair Potion";}
-        if (item.getDamage() == 31){return "Debonair Potion";}
-        if (item.getDamage() == 32){return "Thick Potion";}
-        if (item.getDamage() == 33){return "Potion of Regeneration II";}
-        if (item.getDamage() == 34){return "Potion of Swiftness II";}
-        if (item.getDamage() == 35){return "Potion of Fire Resistance";}
-        if (item.getDamage() == 36){return "Potion of Poison II";}
-        if (item.getDamage() == 37){return "Potion of Healing II";}
-        if (item.getDamage() == 38){return "Charming Potion";}
-        if (item.getDamage() == 39){return "Charming Potion";}
-        if (item.getDamage() == 40){return "Potion of Weakness";}
-        if (item.getDamage() == 41){return "Potion of Strength II";}
-        if (item.getDamage() == 42){return "Potion of Slowness";}
-        if (item.getDamage() == 43){return "Refined Potion";}
-        if (item.getDamage() == 44){return "Potion of Harming II";}
-        if (item.getDamage() == 45){return "Cordial Potion";}
-        if (item.getDamage() == 46){return "Sparkling Potion";}
-        if (item.getDamage() == 47){return "Sparkling Potion";}
-        if (item.getDamage() == 48){return "Potent Potion";}
-        if (item.getDamage() == 49){return "Potion of Regeneration II";}
-        if (item.getDamage() == 50){return "Potion of Swiftness II";}
-        if (item.getDamage() == 51){return "Potion of Fire Resistance";}
-        if (item.getDamage() == 52){return "Potion of Poison II";}
-        if (item.getDamage() == 53){return "Potion of Healing II";}
-        if (item.getDamage() == 54){return "Rank Potion";}
-        if (item.getDamage() == 55){return "Rank Potion";}
-        if (item.getDamage() == 56){return "Potion of Weakness";}
-        if (item.getDamage() == 57){return "Potion of Strength II";}
-        if (item.getDamage() == 58){return "Potion of Slowness";}
-        if (item.getDamage() == 59){return "Acrid Potion";}
-        if (item.getDamage() == 60){return "Potion of Harming II";}
-        if (item.getDamage() == 61){return "Gross Potion";}
-        if (item.getDamage() == 62){return "Stinky Potion";}
-        if (item.getDamage() == 63){return "Stinky Potion";}
-        }
-		if (item.getItemId() == 383){
-	        if (item.getDamage() == 50){return "Creeper Egg";}
-	        if (item.getDamage() == 51){return "Skeleton Egg";}
-	        if (item.getDamage() == 52){return "Spider Egg";}
-	        if (item.getDamage() == 54){return "Zombie Egg";}
-	        if (item.getDamage() == 55){return "Slime Egg";}
-	        if (item.getDamage() == 56){return "Ghast Egg";}
-	        if (item.getDamage() == 57){return "Zombie Pigman Egg";}
-	        if (item.getDamage() == 58){return "Enderman Egg";}
-	        if (item.getDamage() == 59){return "Cave Spider Egg";}
-	        if (item.getDamage() == 60){return "Silverfish Egg";}
-	        if (item.getDamage() == 61){return "Blaze Egg";}
-	        if (item.getDamage() == 62){return "Magma Cube Egg";}
-	        if (item.getDamage() == 90){return "Pig Egg";}
-	        if (item.getDamage() == 91){return "Sheep Egg";}
-	        if (item.getDamage() == 92){return "Cow Egg";}
-	        if (item.getDamage() == 93){return "Chicken Egg";}
-	        if (item.getDamage() == 94){return "Squid Egg";}
-	        if (item.getDamage() == 95){return "Wolf Egg";}
-	        if (item.getDamage() == 96){return "Mooshroom Egg";}
-	        if (item.getDamage() == 98){return "Ocelot Egg";}
-	        if (item.getDamage() == 120){return "Villager Egg";}
-	    }
-		return item.getType().toString();
 	}
 }
